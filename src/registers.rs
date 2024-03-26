@@ -1,5 +1,8 @@
 use num_enum::TryFromPrimitive;
 
+#[cfg(feature = "defmt-03")]
+use defmt_03 as defmt;
+
 #[derive(Copy, Clone, Debug)]
 #[cfg_attr(feature = "defmt-03", derive(defmt::Format))]
 #[repr(u8)]
@@ -150,7 +153,7 @@ pub enum DataRate {
     N330 = 0x04,
     N600 = 0x05,
     N1000 = 0x06,
-    
+
     T40 = 0x10,
     T90 = 0x11,
     T180 = 0x12,
