@@ -2,6 +2,16 @@ use num_enum::TryFromPrimitive;
 
 #[derive(Copy, Clone, Debug)]
 #[cfg_attr(feature = "defmt-03", derive(defmt::Format))]
+#[repr(u8)]
+pub enum Register {
+    Reg0(Register0) = 0,
+    Reg1(Register1) = 1,
+    Reg2(Register2) = 2,
+    Reg3(Register3) = 3,
+}
+
+#[derive(Copy, Clone, Debug)]
+#[cfg_attr(feature = "defmt-03", derive(defmt::Format))]
 pub struct Register0 {
     pub mux: Mux,
     pub gain: Gain,
