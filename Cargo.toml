@@ -1,0 +1,24 @@
+[package]
+name = "ads122c04-async"
+description = "An async driver for the ADS122C04 ADC"
+version = "0.1.0"
+authors = ["ThatRedox"]
+edition = "2021"
+readme = "README.md"
+repository = "https://github.com/ThatRedox/ads122c04-async"
+license = "MIT OR Apache-2.0"
+keywords = ["ads122c04", "adc", "i2c", "async"]
+categories = ["no-std", "no-std::no-alloc", "embedded", "asynchronous", "hardware-support"]
+
+[lib]
+doctest = false
+
+[dependencies]
+embedded-hal-async = "1.0.0"
+defmt-03 = { package = "defmt", version = "0.3", optional = true }
+
+[dev-dependencies]
+futures-lite = "2.3.0"
+
+[features]
+defmt-03 = ["dep:defmt-03"]
