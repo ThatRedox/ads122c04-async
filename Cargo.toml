@@ -15,6 +15,7 @@ doctest = false
 
 [dependencies]
 embedded-hal-async = "1.0.0"
+num_enum = { version = "0.7.2", default-features = false }
 defmt-03 = { package = "defmt", version = "0.3", optional = true }
 
 [dev-dependencies]
